@@ -6,6 +6,7 @@ import { PageHero, DisclaimerNote } from '@/components/common';
 import { CATEGORIES, PROCEDURES } from '@/data/procedures';
 import { DESTINATIONS } from '@/data/destinations';
 import { useLang } from '@/i18n';
+import { LuxSelect } from '@/components/LuxSelect';
 import { PHONE, WA_LINK } from '@/components/layout';
 
 const STEPS = 3;
@@ -107,21 +108,28 @@ export default function Contact() {
                     <div className="mt-8 grid gap-6 md:grid-cols-2">
                       <div>
                         <label className={labelCls}>{t.form.procedure}</label>
-                        <select value={form.procedure} onChange={set('procedure')} className={inputCls}>
-                          <option value="">Not sure yet — advise me</option>
-                          {CATEGORIES.map((c) => (
-                            <optgroup key={c.id} label={c.name}>
-                              {PROCEDURES.filter((p) => p.category === c.id).map((p) => <option key={p.slug} value={p.name}>{p.name}</option>)}
-                            </optgroup>
-                          ))}
-                        </select>
+                        <LuxSelect
+                          tone="light"
+                          value={form.procedure}
+                          onChange={(v) => setForm({ ...form, procedure: v })}
+                          placeholder="Not sure yet — advise me"
+                          ariaLabel={t.form.procedure}
+                          groups={CATEGORIES.map((c) => ({
+                            label: c.name,
+                            options: PROCEDURES.filter((p) => p.category === c.id).map((p) => ({ value: p.name, label: p.name })),
+                          }))}
+                        />
                       </div>
                       <div>
                         <label className={labelCls}>{t.form.destination}</label>
-                        <select value={form.destination} onChange={set('destination')} className={inputCls}>
-                          <option value="">{t.form.any}</option>
-                          {DESTINATIONS.map((d) => <option key={d.slug} value={d.name}>{d.name}</option>)}
-                        </select>
+                        <LuxSelect
+                          tone="light"
+                          value={form.destination}
+                          onChange={(v) => setForm({ ...form, destination: v })}
+                          placeholder={t.form.any}
+                          ariaLabel={t.form.destination}
+                          groups={[{ options: DESTINATIONS.map((d) => ({ value: d.name, label: d.name })) }]}
+                        />
                       </div>
                       <div className="md:col-span-2">
                         <label className={labelCls}>{t.form.message}</label>

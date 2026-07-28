@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { useSEO, useRevealObserver } from '@/hooks/useSEO';
 import { SectionHead, TrustBar } from '@/components/common';
+import { LuxSelect } from '@/components/LuxSelect';
 import { CATEGORIES, PROCEDURES } from '@/data/procedures';
 import { DESTINATIONS } from '@/data/destinations';
 import { useLang } from '@/i18n';
@@ -47,23 +48,28 @@ function SearchBar() {
           onSubmit={(e) => { e.preventDefault(); navigate(`/contact?procedure=${encodeURIComponent(proc)}&destination=${encodeURIComponent(dest)}`); }}
           className="reveal grid gap-px border border-sand/10 bg-sand/10 shadow-[0_30px_80px_rgba(0,0,0,0.55)] md:grid-cols-[1fr_1fr_auto]"
         >
-          <label className="bg-ink-soft px-6 py-5">
+          <label className="bg-ink-soft px-6 py-5 block">
             <span className="block text-[10px] uppercase tracking-[0.22em] text-teal-soft">What are you considering?</span>
-            <select value={proc} onChange={(e) => setProc(e.target.value)} className="mt-2 w-full bg-transparent font-serif text-lg text-sand outline-none [&>option]:text-charcoal">
-              <option value="">Choose a procedure…</option>
-              {CATEGORIES.map((c) => (
-                <optgroup key={c.id} label={c.name}>
-                  {PROCEDURES.filter((p) => p.category === c.id).map((p) => <option key={p.slug} value={p.name}>{p.name}</option>)}
-                </optgroup>
-              ))}
-            </select>
+            <LuxSelect
+              value={proc}
+              onChange={setProc}
+              placeholder="Choose a procedure…"
+              ariaLabel="Choose a procedure"
+              groups={CATEGORIES.map((c) => ({
+                label: c.name,
+                options: PROCEDURES.filter((p) => p.category === c.id).map((p) => ({ value: p.name, label: p.name })),
+              }))}
+            />
           </label>
-          <label className="bg-ink-soft px-6 py-5">
+          <label className="bg-ink-soft px-6 py-5 block">
             <span className="block text-[10px] uppercase tracking-[0.22em] text-teal-soft">Where would you like to go?</span>
-            <select value={dest} onChange={(e) => setDest(e.target.value)} className="mt-2 w-full bg-transparent font-serif text-lg text-sand outline-none [&>option]:text-charcoal">
-              <option value="">No preference yet…</option>
-              {DESTINATIONS.map((d) => <option key={d.slug} value={d.name}>{d.name}</option>)}
-            </select>
+            <LuxSelect
+              value={dest}
+              onChange={setDest}
+              placeholder="No preference yet…"
+              ariaLabel="Choose a destination"
+              groups={[{ options: DESTINATIONS.map((d) => ({ value: d.name, label: d.name })) }]}
+            />
           </label>
           <button className="bg-gold px-10 text-[12px] font-medium uppercase tracking-[0.22em] text-ink transition-colors hover:bg-gold-soft">
             {t.cta.consult}
