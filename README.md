@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Liliav — Private Plastic Surgery Concierge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A luxury, editorial-grade marketing site for **Liliav**, a private plastic surgery brokerage
+connecting international patients with vetted, board-certified clinics across the
+**USA, Turkey, and Lebanon**.
 
-Currently, two official plugins are available:
+**Live preview:** https://liliav.kimi.page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## React Compiler
+- **React 18 + TypeScript + Vite** — component architecture
+- **Tailwind CSS** — dark charcoal / champagne-gold / dusty-teal design system
+- **react-router** — 44 routes (SPA with full static prerendering)
+- Custom components: `LuxSelect` (accessible themed dropdown), `LuxImg` (responsive `<picture>`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key features
 
-## Expanding the ESLint configuration
+- **44 prerendered static routes** — full HTML payload per page for SEO/AI crawlers
+- **24 procedure pages** with recovery timelines, price guidance (USA/TR/LB), FAQs
+- **Destination hubs** (USA · Turkey · Lebanon), surgeon network, journey, results, journal, legal
+- **Trilingual UI** — English / العربية (RTL) / Türkçe
+- **Performance** — WebP responsive images (`srcset`/`sizes`), route-level code-splitting,
+  vendor chunking, hydration over prerendered HTML, non-blocking fonts, hero preload
+- **SEO / AIO** — JSON-LD (Organization, MedicalBusiness, MedicalProcedure, FAQPage,
+  Article, BreadcrumbList), per-route title/meta/canonical, `sitemap.xml`, `robots.txt`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Develop & build
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev            # local dev server
+npm run build          # production build -> dist/
+node scripts/prerender.cjs   # emit static HTML per route + sitemap.xml + robots.txt
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The output in `dist/` is a **pure static site** — host it anywhere (GitHub Pages,
+Netlify, S3, nginx). No server code required.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+  components/   layout (header/footer/WhatsApp), LuxSelect, LuxImg, common
+  data/         procedures (24), destinations, journal articles
+  pages/        Home, Procedures(+detail), Destinations(+detail), Surgeons,
+                Journey, Results, About, Contact, Journal(+article), Legal, NotFound
+  i18n.tsx      EN/AR/TR language provider
+  seo.ts        per-route metadata + JSON-LD builders
+scripts/
+  prerender.cjs post-build static-site generation
+public/images/  AI-generated brand imagery (WebP + JPG, responsive sizes)
 ```
