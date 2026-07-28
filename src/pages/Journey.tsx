@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { ArrowRight } from 'lucide-react';
 import { useSEO, useRevealObserver } from '@/hooks/useSEO';
 import { PageHero, SectionHead } from '@/components/common';
+import { LuxImg } from '@/components/LuxImg';
 import { useLang } from '@/i18n';
 
 const TIMELINE = [
@@ -35,7 +36,8 @@ export default function Journey() {
         eyebrow="The Liliav Journey"
         title={<>Choreographed, <em className="font-serif italic text-gold">so you don’t have to be.</em></>}
         intro="Eight movements from first message to final follow-up. Here is exactly what happens, and when — because trust is built on specifics, not adjectives."
-        image="/images/journey.jpg"
+        image="journey"
+        imageAlt="Private airport transfer at dusk — Liliav plastic surgery brokerage concierge travel service"
       />
 
       <section className="bg-cream py-20 text-charcoal md:py-28">
@@ -57,7 +59,7 @@ export default function Journey() {
       </section>
 
       <section className="relative h-[48vh] min-h-[320px] overflow-hidden">
-        <img src="/images/recovery.jpg" alt="A serene recovery suite at dusk" className="absolute inset-0 h-full w-full object-cover" />
+        <LuxImg base="recovery" alt="Luxury recovery retreat suite at dusk overlooking the Bosphorus — Liliav cosmetic surgery concierge aftercare in Istanbul" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-ink/45" />
         <div className="container-lux relative flex h-full items-center">
           <p className="reveal max-w-md font-serif italic text-2xl leading-relaxed text-sand md:text-3xl">

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router';
 import { ArrowRight, Check, ChevronDown } from 'lucide-react';
-import { useSEO, useRevealObserver } from '@/hooks/useSEO';
+import { useSEO, useRevealObserver, useJsonLd } from '@/hooks/useSEO';
+import { procedureJsonLd } from '@/seo';
 import { PageHero, DisclaimerNote, SectionHead } from '@/components/common';
 import { procedureBySlug, CATEGORIES, proceduresByCategory } from '@/data/procedures';
 import { useLang } from '@/i18n';
@@ -28,6 +29,7 @@ export default function ProcedureDetail() {
     p ? `${p.name} abroad or at home: ${p.tagline} Compare vetted, board-certified surgeons and indicative prices across the USA, Turkey, and Lebanon with Liliav's private concierge.` : undefined,
   );
   useRevealObserver();
+  useJsonLd('ld-procedure', p ? procedureJsonLd(p) : null);
   if (!p) return <Navigate to="/procedures" replace />;
   const cat = CATEGORIES.find((c) => c.id === p.category)!;
   const siblings = proceduresByCategory(p.category).filter((x) => x.slug !== p.slug).slice(0, 4);
@@ -40,12 +42,12 @@ export default function ProcedureDetail() {
         <div className="container-lux grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="reveal">
-              <p className="eyebrow-teal">Overview</p>
+              <h2 className="eyebrow-teal">Overview</h2>
               <p className="mt-5 text-lg leading-relaxed text-charcoal/80">{p.description}</p>
             </div>
 
             <div className="reveal mt-14">
-              <p className="eyebrow-teal">The Ideal Candidate</p>
+              <h2 className="eyebrow-teal">The Ideal Candidate</h2>
               <ul className="mt-6 space-y-4">
                 {p.idealCandidate.map((c) => (
                   <li key={c} className="flex gap-3 text-[15px] leading-relaxed text-charcoal/75">
@@ -56,7 +58,7 @@ export default function ProcedureDetail() {
             </div>
 
             <div className="reveal mt-14">
-              <p className="eyebrow-teal">Recovery Timeline</p>
+              <h2 className="eyebrow-teal">Recovery Timeline</h2>
               <div className="mt-8 space-y-0 border-l border-charcoal/15 pl-8">
                 {p.recovery.map((r) => (
                   <div key={r.phase} className="relative pb-8 last:pb-0">
@@ -69,7 +71,7 @@ export default function ProcedureDetail() {
             </div>
 
             <div className="reveal mt-14">
-              <p className="eyebrow-teal">Frequently Asked</p>
+              <h2 className="eyebrow-teal">Frequently Asked</h2>
               <div className="mt-4">
                 {p.faqs.map((f) => <Faq key={f.q} {...f} />)}
               </div>
@@ -78,7 +80,7 @@ export default function ProcedureDetail() {
 
           <aside className="lg:col-span-5">
             <div className="reveal sticky top-28 border border-charcoal/10 bg-white p-8">
-              <p className="eyebrow-teal">Indicative Investment</p>
+              <h2 className="eyebrow-teal">Indicative Investment</h2>
               <p className="mt-2 text-xs text-charcoal/50">Varies by clinic, surgeon, and technique — written quotes always precede any commitment.</p>
               <dl className="mt-6 space-y-5">
                 {([['United States', p.price.usa], ['Turkey', p.price.turkey], ['Lebanon', p.price.lebanon]] as const).map(([k, v]) => (
@@ -99,7 +101,7 @@ export default function ProcedureDetail() {
 
       <section className="bg-ink py-20">
         <div className="container-lux">
-          <SectionHead eyebrow={`More in ${cat.name}`} title={<></>} />
+          <SectionHead eyebrow="Continue Exploring" title={<>More in <em className="font-serif italic text-gold">{cat.name}.</em></>} />
           <div className="mt-10 grid gap-x-10 md:grid-cols-2 lg:grid-cols-4">
             {siblings.map((s) => (
               <Link key={s.slug} to={`/procedures/${s.slug}`} className="group border-t border-sand/10 py-5 transition-colors hover:border-gold">

@@ -4,6 +4,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 import { useSEO, useRevealObserver } from '@/hooks/useSEO';
 import { SectionHead, TrustBar } from '@/components/common';
 import { LuxSelect } from '@/components/LuxSelect';
+import { LuxImg } from '@/components/LuxImg';
 import { CATEGORIES, PROCEDURES } from '@/data/procedures';
 import { DESTINATIONS } from '@/data/destinations';
 import { useLang } from '@/i18n';
@@ -12,7 +13,14 @@ function Hero() {
   const { t } = useLang();
   return (
     <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink">
-      <img src="/images/hero.jpg" alt="" className="absolute inset-0 h-full w-full object-cover object-[70%_center] opacity-80" />
+      <LuxImg
+        base="hero"
+        alt="Cosmetic surgery concierge — elegant patient portrait representing Liliav, a private plastic surgery brokerage for the USA, Turkey, and Lebanon"
+        eager
+        fetchHigh
+        sizes="100vw"
+        className="absolute inset-0 h-full w-full object-cover object-[70%_center] opacity-80"
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/60" />
       <div className="container-lux relative pb-28 pt-40 md:pb-36">
@@ -155,7 +163,11 @@ function Destinations() {
       <div className="mt-16 space-y-2">
         {DESTINATIONS.map((d, i) => (
           <Link key={d.slug} to={`/destinations/${d.slug}`} className="reveal group relative block h-[46vh] min-h-[320px] overflow-hidden md:h-[54vh]">
-            <img src={d.image} alt={d.name} className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" />
+            <LuxImg
+              base={d.image}
+              alt={`${d.name === 'United States' ? 'Plastic surgery in the USA' : d.name === 'Turkey' ? 'Plastic surgery in Turkey — Istanbul' : 'Cosmetic surgery in Lebanon — Beirut'} skyline, vetted clinics via the Liliav plastic surgery brokerage`}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/35 to-transparent" />
             <div className={`container-lux relative flex h-full flex-col justify-center ${i % 2 ? 'items-end text-right' : ''}`}>
               <span className="eyebrow">0{i + 1} — {d.slug === 'usa' ? 'Los Angeles · New York · Miami' : d.slug === 'turkey' ? 'Istanbul' : 'Beirut'}</span>

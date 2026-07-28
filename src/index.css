@@ -59,7 +59,7 @@
   .marble-dark {
     background-image:
       linear-gradient(rgba(11,11,14,0.82), rgba(11,11,14,0.9)),
-      url('/images/texture-marble.jpg');
+      url('/images/texture-marble-1280.webp');
     background-size: cover; background-position: center;
   }
   .vignette::after {

@@ -128,7 +128,7 @@ export function Footer() {
             </p>
           </div>
           <div className="md:col-span-2">
-            <p className="eyebrow-teal mb-5">{t.footer.explore}</p>
+            <p className="mb-5 text-[11px] font-medium uppercase tracking-widest2 text-[#8FB0C2]">{t.footer.explore}</p>
             <ul className="space-y-3 text-sm text-sand/55">
               <li><Link className="hover:text-gold transition-colors" to="/procedures">{t.nav.procedures}</Link></li>
               <li><Link className="hover:text-gold transition-colors" to="/destinations">{t.nav.destinations}</Link></li>
@@ -137,7 +137,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:col-span-2">
-            <p className="eyebrow-teal mb-5">{t.footer.company}</p>
+            <p className="mb-5 text-[11px] font-medium uppercase tracking-widest2 text-[#8FB0C2]">{t.footer.company}</p>
             <ul className="space-y-3 text-sm text-sand/55">
               <li><Link className="hover:text-gold transition-colors" to="/about">{t.nav.about}</Link></li>
               <li><Link className="hover:text-gold transition-colors" to="/surgeons">{t.nav.surgeons}</Link></li>
@@ -146,7 +146,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:col-span-4">
-            <p className="eyebrow-teal mb-5">Journal</p>
+            <p className="mb-5 text-[11px] font-medium uppercase tracking-widest2 text-[#8FB0C2]">Journal</p>
             <p className="text-sm text-sand/55">{t.footer.newsletter}</p>
             {done ? (
               <p className="mt-4 text-sm text-gold">Thank you — you are on the list.</p>
@@ -156,7 +156,7 @@ export function Footer() {
                 <button className="shrink-0 border border-gold px-5 text-[11px] uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-ink transition-colors">{t.footer.subscribe}</button>
               </form>
             )}
-            <div className="mt-6 flex gap-5 text-sand/40">
+            <div className="mt-6 flex gap-5 text-sand/60">
               {['Instagram', 'Facebook', 'LinkedIn', 'YouTube'].map((s) => (
                 <a key={s} href="#" aria-label={s} className="text-[11px] uppercase tracking-[0.14em] hover:text-gold transition-colors">{s}</a>
               ))}
@@ -164,13 +164,13 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-14 border-t border-sand/10 pt-8">
-          <div className="flex flex-wrap gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.16em] text-sand/40">
+          <div className="flex flex-wrap gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.16em] text-sand/60">
             <Link to="/legal/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>
             <Link to="/legal/terms" className="hover:text-gold transition-colors">Terms of Service</Link>
             <Link to="/legal/disclaimer" className="hover:text-gold transition-colors">Medical Disclaimer</Link>
           </div>
-          <p className="mt-6 text-xs leading-relaxed text-sand/35">{t.footer.disclaimer}</p>
-          <p className="mt-4 text-xs text-sand/35">© {new Date().getFullYear()} Liliav · liliav.com — {t.footer.rights}</p>
+          <p className="mt-6 text-xs leading-relaxed text-sand/55">{t.footer.disclaimer}</p>
+          <p className="mt-4 text-xs text-sand/55">© {new Date().getFullYear()} Liliav · liliav.com — {t.footer.rights}</p>
         </div>
       </div>
     </footer>

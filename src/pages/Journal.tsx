@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from 'react-router';
 import { ArrowRight } from 'lucide-react';
 import { useSEO, useRevealObserver } from '@/hooks/useSEO';
 import { PageHero, DisclaimerNote } from '@/components/common';
+import { LuxImg } from '@/components/LuxImg';
 import { ARTICLES, articleBySlug } from '@/data/destinations';
 import { useLang } from '@/i18n';
 
@@ -21,7 +22,7 @@ export function Journal() {
           {ARTICLES.map((a, i) => (
             <Link key={a.slug} to={`/journal/${a.slug}`} className={`reveal group ${i === 0 ? 'md:col-span-2' : ''}`}>
               <div className="overflow-hidden">
-                <img src={a.image} alt="" className={`w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03] ${i === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'}`} />
+                <LuxImg base={a.image} alt={`${a.title} — Liliav Journal, plastic surgery and medical concierge insights`} sizes={i === 0 ? '100vw' : '(min-width: 768px) 50vw, 100vw'} className={`w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03] ${i === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'}`} />
               </div>
               <div className="mt-6 flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-teal-deep">
                 <span>{a.category}</span><span className="h-px w-6 bg-gold" /><span>{a.date}</span><span>·</span><span>{a.readTime}</span>
@@ -54,7 +55,7 @@ export function Article() {
           </div>
           <h1 className="h-serif reveal mt-6 text-4xl text-sand text-balance md:text-6xl">{a.title}</h1>
         </div>
-        <img src={a.image} alt="" className="h-[42vh] w-full object-cover opacity-90 md:h-[52vh]" />
+        <LuxImg base={a.image} alt={`${a.title} — Liliav Journal`} eager className="h-[42vh] w-full object-cover opacity-90 md:h-[52vh]" />
       </section>
 
       <article className="bg-cream py-16 text-charcoal md:py-24">
@@ -78,7 +79,7 @@ export function Article() {
         <div className="container-lux grid gap-10 md:grid-cols-2">
           {others.map((o) => (
             <Link key={o.slug} to={`/journal/${o.slug}`} className="group">
-              <div className="overflow-hidden"><img src={o.image} alt="" className="aspect-[16/8] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03]" /></div>
+              <div className="overflow-hidden"><LuxImg base={o.image} alt={`${o.title} — Liliav Journal`} sizes="(min-width: 768px) 50vw, 100vw" className="aspect-[16/8] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03]" /></div>
               <p className="mt-5 text-[10px] uppercase tracking-[0.2em] text-teal-soft">{o.category} · {o.readTime}</p>
               <h3 className="mt-2 font-serif text-2xl text-sand transition-colors group-hover:text-gold">{o.title}</h3>
             </Link>

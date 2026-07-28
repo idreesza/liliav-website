@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { ArrowRight } from 'lucide-react';
 import { useSEO, useRevealObserver } from '@/hooks/useSEO';
 import { PageHero, SectionHead } from '@/components/common';
+import { LuxImg } from '@/components/LuxImg';
 import { useLang } from '@/i18n';
 
 const REFLECTIONS = [
@@ -33,7 +34,7 @@ export default function Results() {
       <section className="bg-ink py-20 md:py-28">
         <div className="container-lux">
           <div className="reveal relative overflow-hidden">
-            <img src="/images/silhouette.jpg" alt="Abstract silhouette study of transformation" className="w-full object-cover" />
+            <LuxImg base="silhouette" alt="Artistic gold silhouette study of aesthetic transformation — Liliav plastic surgery brokerage results philosophy" className="w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/30" />
             <p className="absolute bottom-6 left-6 right-6 max-w-lg font-serif italic text-lg text-sand/85 md:text-xl">
               “Every line in its right place.” — a study of transformation, in gold on charcoal.
@@ -42,18 +43,18 @@ export default function Results() {
 
           <div className="mt-20 grid gap-6 md:grid-cols-3">
             {[
-              { img: '/images/portrait-1.jpg', label: 'Beirut · 40s' },
-              { img: '/images/portrait-2.jpg', label: 'Istanbul · 30s' },
-              { img: '/images/portrait-3.jpg', label: 'Los Angeles · 20s' },
+              { img: 'portrait-1', label: 'Beirut · 40s' },
+              { img: 'portrait-2', label: 'Istanbul · 30s' },
+              { img: 'portrait-3', label: 'Los Angeles · 20s' },
             ].map((p) => (
               <figure key={p.img} className="reveal group relative overflow-hidden">
-                <img src={p.img} alt="" className="aspect-[2/3] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03]" />
+                <LuxImg base={p.img} alt={`Illustrative patient portrait, ${p.label} — representing the Liliav plastic surgery brokerage community`} sizes="(min-width: 768px) 33vw, 100vw" className="aspect-[2/3] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.2em] text-sand/80">{p.label}</figcaption>
               </figure>
             ))}
           </div>
-          <p className="reveal mt-4 text-xs text-sand/35">Illustrative AI-generated portraits in the spirit of our patient community — not real individuals.</p>
+          <p className="reveal mt-4 text-xs text-sand/55">Illustrative AI-generated portraits in the spirit of our patient community — not real individuals.</p>
 
           <div className="mt-20 grid gap-x-12 gap-y-14 md:grid-cols-2">
             {REFLECTIONS.map((r, i) => (

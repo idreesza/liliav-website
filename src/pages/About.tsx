@@ -22,7 +22,8 @@ export default function About() {
         eyebrow="About Liliav"
         title={<>Where confidence <em className="font-serif italic text-gold">begins.</em></>}
         intro="Liliav was founded on a simple observation: the world's best aesthetic surgeons are scattered across three continents, and finding them safely should not require luck."
-        image="/images/about.jpg"
+        image="about"
+        imageAlt="Brass compass on dark marble — Liliav cosmetic surgery concierge bridging patients across borders"
       />
       <TrustBar />
 

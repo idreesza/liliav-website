@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from 'react-router';
 import { ArrowRight, Check } from 'lucide-react';
 import { useSEO, useRevealObserver } from '@/hooks/useSEO';
 import { PageHero, SectionHead, TrustBar } from '@/components/common';
+import { LuxImg } from '@/components/LuxImg';
 import { DESTINATIONS, destinationBySlug } from '@/data/destinations';
 import { useLang } from '@/i18n';
 
@@ -20,7 +21,12 @@ export function DestinationsHub() {
         {DESTINATIONS.map((d, i) => (
           <section key={d.slug} className={`reveal container-lux grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 ${i % 2 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
             <div className="relative overflow-hidden">
-              <img src={d.image} alt={d.name} className="aspect-[16/10] w-full object-cover" />
+              <LuxImg
+                base={d.image}
+                alt={`${d.name === 'United States' ? 'Plastic surgery USA' : d.name === 'Turkey' ? 'Plastic surgery Turkey' : 'Cosmetic surgery Lebanon'} — artistic skyline, vetted ${d.name} clinics through the Liliav cosmetic surgery concierge`}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="aspect-[16/10] w-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
             </div>
             <div>
@@ -50,7 +56,7 @@ export function DestinationDetail() {
 
   return (
     <>
-      <PageHero eyebrow="Destination" title={<>{d.name}. <em className="font-serif italic text-gold">{d.tagline}</em></>} intro={d.heroStatement} image={d.image} />
+      <PageHero eyebrow="Destination" title={<>{d.name}. <em className="font-serif italic text-gold">{d.tagline}</em></>} intro={d.heroStatement} image={d.image} imageAlt={`${d.name} skyline — ${d.name === 'United States' ? 'plastic surgery USA' : d.name === 'Turkey' ? 'plastic surgery Turkey' : 'cosmetic surgery Lebanon'} with the Liliav plastic surgery brokerage`} />
       <TrustBar />
 
       <section className="bg-cream py-20 text-charcoal md:py-28">

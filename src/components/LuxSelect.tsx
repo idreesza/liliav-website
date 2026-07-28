@@ -108,8 +108,9 @@ export function LuxSelect({ value, onChange, placeholder, groups, tone = 'dark',
       </button>
 
       <div
+        aria-hidden={!open}
         className={`absolute inset-x-0 top-full z-[60] mt-2 origin-top transition-all duration-200 ease-out ${
-          open ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0'
+          open ? 'pointer-events-auto visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0'
         }`}
       >
         <ul

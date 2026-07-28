@@ -17,7 +17,7 @@ export const DESTINATIONS: Destination[] = [
     slug: 'usa',
     name: 'United States',
     tagline: 'Home-ground excellence, from Beverly Hills to Manhattan.',
-    image: '/images/dest-usa.jpg',
+    image: 'dest-usa',
     heroStatement: 'For patients based in North America — or those who simply want the world’s most regulated aesthetic market — our US network spans elite private practices in Los Angeles, New York, and Miami.',
     why: [
       { title: 'The strictest regulatory environment', detail: 'American board certification (ABPS) and AAAASF/AAAHC-accredited surgical facilities represent the most demanding credentialing standard in the world.' },
@@ -38,7 +38,7 @@ export const DESTINATIONS: Destination[] = [
     slug: 'turkey',
     name: 'Turkey',
     tagline: 'The world’s capital of aesthetic surgery — at honest prices.',
-    image: '/images/dest-turkey.jpg',
+    image: 'dest-turkey',
     heroStatement: 'Istanbul performs more aesthetic procedures than any city on earth. Within that scale, we select only the clinics whose outcomes, accreditations, and ethics would satisfy the most demanding international patient.',
     why: [
       { title: 'Unmatched case volume', detail: 'Turkish partner surgeons perform hundreds of rhinoplasties, hair transplants, and body procedures annually — repetition that refines craft.' },
@@ -59,7 +59,7 @@ export const DESTINATIONS: Destination[] = [
     slug: 'lebanon',
     name: 'Lebanon',
     tagline: 'Boutique, surgeon-led care in the heart of the Mediterranean.',
-    image: '/images/dest-lebanon.jpg',
+    image: 'dest-lebanon',
     heroStatement: 'Beirut has been the aesthetic capital of the Middle East for half a century. Its culture of discreet, surgeon-led boutique practice suits patients who want a named surgeon, a private setting, and warm Arabic hospitality.',
     why: [
       { title: 'A boutique tradition', detail: 'Lebanese aesthetic surgery is built on named surgeons with personal practices — you are a patient of your surgeon, not a clinic volume.' },
@@ -99,7 +99,7 @@ export const ARTICLES: Article[] = [
     date: 'July 2026',
     readTime: '7 min read',
     excerpt: 'Where you recover matters almost as much as where you are operated on. A quiet comparison of three very different — and very good — places to heal.',
-    image: '/images/journal-1.jpg',
+    image: 'journal-1',
     body: [
       { paragraphs: ['Ask anyone who has had surgery abroad what they remember most, and they rarely mention the operating room. They remember the room they woke up in, the view from the window in the week that followed, and how cared for they felt when they were at their most vulnerable.', 'Recovery environment is not a luxury consideration. Rest, nutrition, low stress, and easy access to your surgical team all measurably influence healing. Here is how our three regions compare, honestly.'] },
       { heading: 'Istanbul: infrastructure built for this', paragraphs: ['No city on earth has more experience hosting surgical recovery. Recovery-oriented hotels near Nişantaşı and the Bosphorus understand drain-friendly pillows, soft-food room service, and discretion. Your coordinator is never more than a few minutes away, and clinics are accustomed to seeing international patients daily in the first week.', 'The trade-off: Istanbul is vast and energetic. Choose accommodation close to your clinic, and let the concierge shield you from the logistics.'] },
@@ -115,7 +115,7 @@ export const ARTICLES: Article[] = [
     date: 'June 2026',
     readTime: '5 min read',
     excerpt: 'No pressure, no sales script. Here is exactly what happens — and what should happen — in a first consultation arranged through Liliav.',
-    image: '/images/consult.jpg',
+    image: 'consult',
     body: [
       { paragraphs: ['A consultation is not a commitment. It is a conversation — the first honest exchange between you and a surgeon about what is possible, what is sensible, and what is not advisable. Here is how ours work.'] },
       { heading: 'Before you speak to a surgeon', paragraphs: ['Your Liliav coordinator first listens: your goals, your history, your timeline, your budget. We then match you with one to three surgeons whose practice genuinely fits — and share their credentials, not our marketing.', 'You send photographs securely through our HIPAA-compliant channel. They are reviewed by the surgeon, never by sales staff.'] },
@@ -130,7 +130,7 @@ export const ARTICLES: Article[] = [
     date: 'May 2026',
     readTime: '6 min read',
     excerpt: 'The best nose surgery is the one nobody notices. On preservation techniques, ethnic harmony, and why "smaller" is rarely the brief.',
-    image: '/images/texture-silk.jpg',
+    image: 'texture-silk',
     body: [
       { paragraphs: ['There is a particular look people fear: the over-operated nose — pinched, upturned, borrowed from someone else’s face. Modern rhinoplasty has moved decisively away from it. The contemporary goal is structural and quiet: a nose that suits your face so completely that it reads as genetics.'] },
       { heading: 'Preservation over reduction', paragraphs: ['Traditional rhinoplasty often removed the dorsal hump and rebuilt the profile. Preservation techniques instead lower and reshape the nose’s own structures, keeping the natural dorsal lines and stronger long-term support. Where suitable, our partner surgeons favor them.', 'The functional dimension matters equally: a beautiful nose that breathes poorly is a failure. Septum, valves, and turbinates are assessed at every consultation in our network.'] },
@@ -145,7 +145,7 @@ export const ARTICLES: Article[] = [
     date: 'April 2026',
     readTime: '8 min read',
     excerpt: 'Flights, blood clots, consent forms, companion planning — the unglamorous details that make surgical travel genuinely safe.',
-    image: '/images/journey.jpg',
+    image: 'journey',
     body: [
       { paragraphs: ['Medical travel is safe when it is planned like medicine and not like tourism. This is the checklist our coordinators work through with every patient — shared here because transparency is the whole point.'] },
       { heading: 'Before you book anything', paragraphs: ['Verify the surgeon, not just the clinic: board certification, hospital privileges, years in practice. Verify the facility: JCI or national accreditation, anesthesia staffing, ICU backup. Get every quote in writing, itemized. If any of these is resisted, walk away — from us or anyone.'] },

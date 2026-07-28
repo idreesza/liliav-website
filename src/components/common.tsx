@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { useLang } from '@/i18n';
+import { LuxImg } from './LuxImg';
 
 export function Monogram({ className = 'h-8 w-8', dark = false }: { className?: string; dark?: boolean }) {
   const stroke = dark ? '#1C1C1C' : '#C9A876';
@@ -38,12 +39,12 @@ export function SectionHead({ eyebrow, title, intro, dark = true, center = false
   );
 }
 
-export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: React.ReactNode; intro?: string; image?: string }) {
+export function PageHero({ eyebrow, title, intro, image, imageAlt = '' }: { eyebrow: string; title: React.ReactNode; intro?: string; image?: string; imageAlt?: string }) {
   return (
     <section className="relative overflow-hidden bg-ink pt-36 pb-20 md:pt-44 md:pb-28">
       {image && (
         <>
-          <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" />
+          <LuxImg base={image} alt={imageAlt} eager className="absolute inset-0 h-full w-full object-cover opacity-35" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/40" />
         </>
       )}
@@ -80,7 +81,7 @@ export function TrustBar({ light = false }: { light?: boolean }) {
 
 export function DisclaimerNote({ light = false, className = '' }: { light?: boolean; className?: string }) {
   return (
-    <p className={`text-xs leading-relaxed ${light ? 'text-charcoal/50' : 'text-sand/40'} ${className}`}>
+    <p className={`text-xs leading-relaxed ${light ? 'text-charcoal/60' : 'text-sand/55'} ${className}`}>
       Information on this page is general in nature and does not constitute medical advice. Outcomes vary by individual.
       Final guidance, candidacy assessment, and pricing always come from a licensed consulting surgeon.
     </p>

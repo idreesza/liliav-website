@@ -31,7 +31,8 @@ export default function Surgeons() {
         eyebrow="Our Surgeon Network"
         title={<>Fewer than a third <em className="font-serif italic text-gold">make it in.</em></>}
         intro="We are not a directory. Every surgeon in the Liliav network has passed a vetting process designed by people who have spent their careers inside operating rooms — and every one is re-reviewed annually."
-        image="/images/clinic.jpg"
+        image="clinic"
+        imageAlt="Vetted luxury aesthetic clinic interior — Liliav board-certified surgeon network partner"
       />
       <TrustBar />
 

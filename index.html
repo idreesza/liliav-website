@@ -11,7 +11,67 @@
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/images/hero-1280.webp" imagesrcset="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-2048.webp 2048w" imagesizes="100vw" fetchpriority="high" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://liliav.com/#organization",
+      "name": "Liliav",
+      "url": "https://liliav.com",
+      "slogan": "Beauty Without Borders",
+      "description": "Liliav is an independent plastic surgery brokerage and concierge service connecting international patients with vetted, board-certified plastic surgery clinics and hospitals in the United States, Turkey, and Lebanon.",
+      "areaServed": [
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "Turkey" },
+        { "@type": "Country", "name": "Lebanon" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-310-555-0142",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Arabic", "Turkish"],
+        "hoursAvailable": "Mo-Su 00:00-24:00"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": "https://liliav.com/#medicalbusiness",
+      "name": "Liliav — Private Plastic Surgery Concierge",
+      "url": "https://liliav.com",
+      "description": "A private brokerage and concierge connecting patients with vetted, board-certified plastic surgeons and accredited clinics across the USA, Turkey, and Lebanon. Liliav does not perform surgery; it arranges consultations, transparent quotes, travel, and aftercare.",
+      "medicalSpecialty": "PlasticSurgery",
+      "areaServed": [
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "Turkey" },
+        { "@type": "Country", "name": "Lebanon" }
+      ],
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Rhinoplasty" },
+        { "@type": "MedicalProcedure", "name": "Facelift" },
+        { "@type": "MedicalProcedure", "name": "Blepharoplasty" },
+        { "@type": "MedicalProcedure", "name": "Breast Augmentation" },
+        { "@type": "MedicalProcedure", "name": "Tummy Tuck" },
+        { "@type": "MedicalProcedure", "name": "Liposuction" },
+        { "@type": "MedicalProcedure", "name": "Hair Transplant" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Liliav",
+      "url": "https://liliav.com",
+      "inLanguage": ["en", "ar", "tr"]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

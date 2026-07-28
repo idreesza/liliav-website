@@ -27,3 +27,22 @@ export function useRevealObserver() {
     return () => io.disconnect();
   });
 }
+
+/** Injects (and cleans up) a JSON-LD structured-data script tag — keeps schema correct on client-side navigation. */
+export function useJsonLd(id: string, data: Record<string, unknown> | null) {
+  const serialized = data ? JSON.stringify(data) : null;
+  useEffect(() => {
+    if (!serialized) return;
+    let el = document.getElementById(id) as HTMLScriptElement | null;
+    if (!el) {
+      el = document.createElement('script');
+      el.id = id;
+      el.type = 'application/ld+json';
+      document.head.appendChild(el);
+    }
+    el.textContent = serialized;
+    return () => {
+      document.getElementById(id)?.remove();
+    };
+  }, [id, serialized]);
+}
