@@ -38,7 +38,11 @@ export default function App() {
             <Route path="journal" element={<Journal />} />
             <Route path="journal/:slug" element={<Article />} />
             <Route path="legal/:doc" element={<Legal />} />
-            <Route path="embed/*" element={<LegacyRedirect />} />
+            <Route path="video/*" element={<LegacyRedirect />} />
+          <Route path="tags/*" element={<LegacyRedirect />} />
+          <Route path="user/*" element={<LegacyRedirect />} />
+          <Route path="upload/*" element={<LegacyRedirect />} />
+          <Route path="embed/*" element={<LegacyRedirect />} />
           <Route path="static/*" element={<LegacyRedirect />} />
           <Route path="feeds/*" element={<LegacyRedirect />} />
           <Route path=".well-known/*" element={<LegacyRedirect />} />
@@ -150,6 +154,7 @@ export default function App() {
           <Route path="hot.html" element={<LegacyRedirect />} />
           <Route path="like.html" element={<LegacyRedirect />} />
           <Route path="new.html" element={<LegacyRedirect />} />
+          <Route path="tags.html" element={<LegacyRedirect />} />
           <Route path="feed" element={<LegacyRedirect />} />
           <Route path="feed.xml" element={<LegacyRedirect />} />
           <Route path="atom.xml" element={<LegacyRedirect />} />

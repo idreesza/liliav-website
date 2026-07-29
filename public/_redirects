@@ -2,10 +2,15 @@
 # All legacy page paths permanently redirect to the new home page (301).
 
 # Legacy content pages (video/CMS site)
+/video/*        /    301
+/tags/*         /    301
+/user/*         /    301
+/upload/*       /    301
 /embed/*        /    301
 /hot.html       /    301
 /like.html      /    301
 /new.html       /    301
+/tags.html      /    301
 /new-*.html     /    301
 
 # Legacy feeds & indexes
