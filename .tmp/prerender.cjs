@@ -54924,11 +54924,11 @@ function TrustBar({ light = false }) {
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M12 7v5l3.5 2" })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: `text-[11px] uppercase tracking-[0.14em] ${light ? "text-charcoal/60" : "text-sand/55"}`, children: label })
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: `text-[11px] uppercase tracking-[0.14em] ${light ? "text-charcoal/70" : "text-sand/60"}`, children: label })
   ] }, label)) }) });
 }
 function DisclaimerNote({ light = false, className = "" }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: `text-xs leading-relaxed ${light ? "text-charcoal/60" : "text-sand/55"} ${className}`, children: "Information on this page is general in nature and does not constitute medical advice. Outcomes vary by individual. Final guidance, candidacy assessment, and pricing always come from a licensed consulting surgeon." });
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: `text-xs leading-relaxed ${light ? "text-charcoal/70" : "text-sand/60"} ${className}`, children: "Information on this page is general in nature and does not constitute medical advice. Outcomes vary by individual. Final guidance, candidacy assessment, and pricing always come from a licensed consulting surgeon." });
 }
 
 // src/components/layout.tsx
@@ -54941,7 +54941,7 @@ function LangSwitch() {
     "button",
     {
       onClick: () => setLang(l.id),
-      className: `px-2 py-1 transition-colors ${lang === l.id ? "text-gold" : "text-sand/45 hover:text-sand"}`,
+      className: `px-2 py-1 transition-colors ${lang === l.id ? "text-gold" : "text-sand/60 hover:text-sand"}`,
       children: l.label
     },
     l.id
@@ -55005,7 +55005,7 @@ function Header() {
     ] }) }),
     open && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "hidden lg:block border-t border-sand/10 bg-ink/95 backdrop-blur-md", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "container-lux grid grid-cols-4 gap-8 py-10", children: NAV_MORE.map(({ to, key }) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(NavLink, { to, className: "group border-l border-sand/10 pl-5", children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "block font-serif text-xl text-sand group-hover:text-gold transition-colors", children: t.nav[key] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "mt-1 block text-[11px] uppercase tracking-[0.16em] text-sand/40", children: "Liliav" })
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "mt-1 block text-[11px] uppercase tracking-[0.16em] text-sand/55", children: "Liliav" })
     ] }, to)) }) })
   ] });
 }
@@ -55234,7 +55234,7 @@ function LuxSelect({ value, onChange, placeholder, groups, tone = "dark", ariaLa
         onClick: () => open ? setOpen(false) : openList(),
         className: `group/sel mt-2 flex w-full items-center justify-between gap-4 border px-0 py-0 text-start outline-none transition-colors duration-300 ${tone === "dark" ? triggerDark : `${triggerLight} !mt-0 px-4 py-3`}`,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: `truncate font-serif text-lg ${selected ? tone === "dark" ? "text-sand" : "text-charcoal" : tone === "dark" ? "text-sand/40" : "text-charcoal/40"} ${tone === "light" ? "!font-sans !text-sm" : ""}`, children: selected ? selected.label : placeholder }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: `truncate font-serif text-lg ${selected ? tone === "dark" ? "text-sand" : "text-charcoal" : tone === "dark" ? "text-sand/60" : "text-charcoal/60"} ${tone === "light" ? "!font-sans !text-sm" : ""}`, children: selected ? selected.label : placeholder }),
           /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
             import_lucide_react2.ChevronDown,
             {
@@ -55891,7 +55891,7 @@ function Hero() {
         /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_lucide_react3.ArrowRight, { className: "h-4 w-4" })
       ] }) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "absolute bottom-8 left-1/2 -translate-x-1/2 text-sand/40", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_lucide_react3.ArrowDown, { className: "h-5 w-5 animate-bounce" }) })
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "absolute bottom-8 left-1/2 -translate-x-1/2 text-sand/60", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_lucide_react3.ArrowDown, { className: "h-5 w-5 animate-bounce" }) })
   ] });
 }
 function SearchBar() {
@@ -55985,7 +55985,7 @@ function FeaturedProcedures() {
       return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Link, { to: `/procedures/${p.slug}`, className: "reveal group flex items-baseline justify-between gap-6 border-b border-charcoal/10 py-6 transition-colors hover:border-gold", children: [
         /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h3", { className: "font-serif text-xl md:text-2xl text-charcoal transition-colors group-hover:text-gold-deep", children: p.name }),
-          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "mt-1 text-sm text-charcoal/55", children: p.tagline })
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "mt-1 text-sm text-charcoal/70", children: p.tagline })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "shrink-0 text-right text-[11px] uppercase tracking-[0.14em] text-teal-deep", children: [
           "from ",
@@ -56050,7 +56050,7 @@ function Testimonials() {
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("blockquote", { className: "mx-auto -mt-4 max-w-2xl font-serif text-xl leading-relaxed text-charcoal/85 md:text-2xl", children: q.text }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("figcaption", { className: "mt-5 text-[11px] uppercase tracking-[0.2em] text-teal-deep", children: q.who })
     ] }, q.who)) }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "reveal mt-14 text-center text-xs text-charcoal/45", children: "Illustrative sample testimonials, shown with permission of style rather than substance \u2014 they will be replaced with verified patient reviews as our first journeys complete." })
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "reveal mt-14 text-center text-xs text-charcoal/70", children: "Illustrative sample testimonials, shown with permission of style rather than substance \u2014 they will be replaced with verified patient reviews as our first journeys complete." })
   ] }) });
 }
 var WHY = [
@@ -56131,11 +56131,11 @@ function Procedures() {
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { className: "h-serif mt-2 text-3xl md:text-4xl", children: c.name })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "max-w-xl text-sm leading-relaxed text-charcoal/60", children: c.blurb })
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "max-w-xl text-sm leading-relaxed text-charcoal/70", children: c.blurb })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-2 grid gap-x-12 md:grid-cols-2 lg:grid-cols-3", children: proceduresByCategory(c.id).map((p) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(Link, { to: `/procedures/${p.slug}`, className: "group border-b border-charcoal/10 py-6 transition-colors hover:border-gold", children: [
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { className: "font-serif text-lg text-charcoal transition-colors group-hover:text-gold-deep md:text-xl", children: p.name }),
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-1 text-[13px] leading-relaxed text-charcoal/55", children: p.tagline }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-1 text-[13px] leading-relaxed text-charcoal/70", children: p.tagline }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "mt-3 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-teal-deep opacity-0 transition-opacity group-hover:opacity-100", children: [
           "View procedure ",
           /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_lucide_react4.ArrowRight, { className: "h-3 w-3" })
@@ -56345,7 +56345,7 @@ function ProcedureDetail() {
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("aside", { className: "lg:col-span-5", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "reveal sticky top-28 border border-charcoal/10 bg-white p-8", children: [
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h2", { className: "eyebrow-teal", children: "Indicative Investment" }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-xs text-charcoal/50", children: "Varies by clinic, surgeon, and technique \u2014 written quotes always precede any commitment." }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-xs text-charcoal/70", children: "Varies by clinic, surgeon, and technique \u2014 written quotes always precede any commitment." }),
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("dl", { className: "mt-6 space-y-5", children: [["United States", p.price.usa], ["Turkey", p.price.turkey], ["Lebanon", p.price.lebanon]].map(([k, v]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "flex items-baseline justify-between border-b border-charcoal/10 pb-4", children: [
           /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("dt", { className: "text-[11px] uppercase tracking-[0.18em] text-charcoal/55", children: k }),
           /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("dd", { className: "font-serif text-xl text-charcoal", children: v })
@@ -56584,10 +56584,10 @@ function Surgeons() {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "mt-5 border-t border-sand/10 pt-4", children: [
           /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "text-sm text-sand/70", children: s.focus }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "mt-1 text-[13px] text-sand/45", children: s.cases })
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "mt-1 text-[13px] text-sand/60", children: s.cases })
         ] })
       ] }, s.focus)) }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "reveal mt-10 text-xs text-sand/40", children: "Illustrative placeholder profiles. Named surgeon profiles with full credentials will be published as partnership agreements finalize." }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "reveal mt-10 text-xs text-sand/55", children: "Illustrative placeholder profiles. Named surgeon profiles with full credentials will be published as partnership agreements finalize." }),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "reveal mt-10", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Link, { to: "/contact", className: "btn-gold", children: [
         t.cta.request,
         " ",
@@ -56885,7 +56885,7 @@ function Contact() {
             " ",
             /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-sm", children: t.cta.whatsapp })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "mt-4 text-xs text-charcoal/50", children: "Available around the clock \xB7 English / \u0627\u0644\u0639\u0631\u0628\u064A\u0629 / T\xFCrk\xE7e" })
+          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "mt-4 text-xs text-charcoal/65", children: "Available around the clock \xB7 English / \u0627\u0644\u0639\u0631\u0628\u064A\u0629 / T\xFCrk\xE7e" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(DisclaimerNote, { light: true })
       ] }) }),
@@ -56973,7 +56973,7 @@ function Contact() {
         ] }),
         step === 3 && /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "mt-8 space-y-6", children: [
           /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("dl", { className: "grid gap-x-8 gap-y-4 border border-charcoal/10 bg-cream/60 p-6 text-sm md:grid-cols-2", children: [["Name", form.name], ["Email", form.email], ["Phone", form.phone || "\u2014"], ["Country", form.country || "\u2014"], ["Procedure", form.procedure || "To be advised"], ["Destination", form.destination || "No preference"]].map(([k, v]) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("dt", { className: "text-[10px] uppercase tracking-[0.18em] text-charcoal/45", children: k }),
+            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("dt", { className: "text-[10px] uppercase tracking-[0.18em] text-charcoal/65", children: k }),
             /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("dd", { className: "mt-1 text-charcoal/85", children: v })
           ] }, k)) }),
           /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("label", { className: "flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-charcoal/70", children: [
@@ -57029,7 +57029,7 @@ function Journal() {
         /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: a.readTime })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h2", { className: `h-serif mt-3 text-charcoal transition-colors group-hover:text-gold-deep ${i === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`, children: a.title }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { className: "mt-3 max-w-xl text-sm leading-relaxed text-charcoal/60", children: a.excerpt })
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { className: "mt-3 max-w-xl text-sm leading-relaxed text-charcoal/70", children: a.excerpt })
     ] }, a.slug)) }) })
   ] });
 }

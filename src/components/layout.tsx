@@ -15,7 +15,7 @@ function LangSwitch() {
         <button
           key={l.id}
           onClick={() => setLang(l.id)}
-          className={`px-2 py-1 transition-colors ${lang === l.id ? 'text-gold' : 'text-sand/45 hover:text-sand'}`}
+          className={`px-2 py-1 transition-colors ${lang === l.id ? 'text-gold' : 'text-sand/60 hover:text-sand'}`}
         >
           {l.label}
         </button>
@@ -102,7 +102,7 @@ export function Header() {
             {NAV_MORE.map(({ to, key }) => (
               <NavLink key={to} to={to} className="group border-l border-sand/10 pl-5">
                 <span className="block font-serif text-xl text-sand group-hover:text-gold transition-colors">{t.nav[key]}</span>
-                <span className="mt-1 block text-[11px] uppercase tracking-[0.16em] text-sand/40">Liliav</span>
+                <span className="mt-1 block text-[11px] uppercase tracking-[0.16em] text-sand/55">Liliav</span>
               </NavLink>
             ))}
           </div>

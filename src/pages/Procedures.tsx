@@ -25,13 +25,13 @@ export default function Procedures() {
                   <p className="eyebrow-teal">{String(proceduresByCategory(c.id).length).padStart(2, '0')} procedures</p>
                   <h2 className="h-serif mt-2 text-3xl md:text-4xl">{c.name}</h2>
                 </div>
-                <p className="max-w-xl text-sm leading-relaxed text-charcoal/60">{c.blurb}</p>
+                <p className="max-w-xl text-sm leading-relaxed text-charcoal/70">{c.blurb}</p>
               </div>
               <div className="mt-2 grid gap-x-12 md:grid-cols-2 lg:grid-cols-3">
                 {proceduresByCategory(c.id).map((p) => (
                   <Link key={p.slug} to={`/procedures/${p.slug}`} className="group border-b border-charcoal/10 py-6 transition-colors hover:border-gold">
                     <h3 className="font-serif text-lg text-charcoal transition-colors group-hover:text-gold-deep md:text-xl">{p.name}</h3>
-                    <p className="mt-1 text-[13px] leading-relaxed text-charcoal/55">{p.tagline}</p>
+                    <p className="mt-1 text-[13px] leading-relaxed text-charcoal/70">{p.tagline}</p>
                     <span className="mt-3 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-teal-deep opacity-0 transition-opacity group-hover:opacity-100">
                       View procedure <ArrowRight className="h-3 w-3" />
                     </span>

@@ -28,7 +28,7 @@ export function Journal() {
                 <span>{a.category}</span><span className="h-px w-6 bg-gold" /><span>{a.date}</span><span>·</span><span>{a.readTime}</span>
               </div>
               <h2 className={`h-serif mt-3 text-charcoal transition-colors group-hover:text-gold-deep ${i === 0 ? 'text-3xl md:text-4xl' : 'text-2xl'}`}>{a.title}</h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-charcoal/60">{a.excerpt}</p>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-charcoal/70">{a.excerpt}</p>
             </Link>
           ))}
         </div>

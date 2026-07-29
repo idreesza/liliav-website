@@ -98,7 +98,7 @@ export function LuxSelect({ value, onChange, placeholder, groups, tone = 'dark',
         onClick={() => (open ? setOpen(false) : openList())}
         className={`group/sel mt-2 flex w-full items-center justify-between gap-4 border px-0 py-0 text-start outline-none transition-colors duration-300 ${tone === 'dark' ? triggerDark : `${triggerLight} !mt-0 px-4 py-3`}`}
       >
-        <span className={`truncate font-serif text-lg ${selected ? (tone === 'dark' ? 'text-sand' : 'text-charcoal') : tone === 'dark' ? 'text-sand/40' : 'text-charcoal/40'} ${tone === 'light' ? '!font-sans !text-sm' : ''}`}>
+        <span className={`truncate font-serif text-lg ${selected ? (tone === 'dark' ? 'text-sand' : 'text-charcoal') : tone === 'dark' ? 'text-sand/60' : 'text-charcoal/60'} ${tone === 'light' ? '!font-sans !text-sm' : ''}`}>
           {selected ? selected.label : placeholder}
         </span>
         <ChevronDown

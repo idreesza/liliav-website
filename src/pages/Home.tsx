@@ -37,7 +37,7 @@ function Hero() {
           <Link to="/contact" className="btn-gold-solid">{t.cta.consult}<ArrowRight className="h-4 w-4" /></Link>
         </div>
       </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-sand/40">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-sand/60">
         <ArrowDown className="h-5 w-5 animate-bounce" />
       </div>
     </section>
@@ -139,7 +139,7 @@ function FeaturedProcedures() {
               <Link key={slug} to={`/procedures/${p.slug}`} className="reveal group flex items-baseline justify-between gap-6 border-b border-charcoal/10 py-6 transition-colors hover:border-gold">
                 <div>
                   <h3 className="font-serif text-xl md:text-2xl text-charcoal transition-colors group-hover:text-gold-deep">{p.name}</h3>
-                  <p className="mt-1 text-sm text-charcoal/55">{p.tagline}</p>
+                  <p className="mt-1 text-sm text-charcoal/70">{p.tagline}</p>
                 </div>
                 <span className="shrink-0 text-right text-[11px] uppercase tracking-[0.14em] text-teal-deep">from {p.price.turkey.split('–')[0].trim()}</span>
               </Link>
@@ -204,7 +204,7 @@ function Testimonials() {
             </figure>
           ))}
         </div>
-        <p className="reveal mt-14 text-center text-xs text-charcoal/45">
+        <p className="reveal mt-14 text-center text-xs text-charcoal/70">
           Illustrative sample testimonials, shown with permission of style rather than substance — they will be replaced with verified patient reviews as our first journeys complete.
         </p>
       </div>

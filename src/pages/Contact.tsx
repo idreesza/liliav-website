@@ -68,7 +68,7 @@ export default function Contact() {
                 <a href={WA_LINK} target="_blank" rel="noreferrer" className="mt-3 flex items-center gap-3 text-charcoal/80 hover:text-gold-deep transition-colors">
                   <MessageCircle className="h-4 w-4 text-gold-deep" /> <span className="text-sm">{t.cta.whatsapp}</span>
                 </a>
-                <p className="mt-4 text-xs text-charcoal/50">Available around the clock · English / العربية / Türkçe</p>
+                <p className="mt-4 text-xs text-charcoal/65">Available around the clock · English / العربية / Türkçe</p>
               </div>
               <DisclaimerNote light />
             </div>
@@ -142,7 +142,7 @@ export default function Contact() {
                     <div className="mt-8 space-y-6">
                       <dl className="grid gap-x-8 gap-y-4 border border-charcoal/10 bg-cream/60 p-6 text-sm md:grid-cols-2">
                         {([['Name', form.name], ['Email', form.email], ['Phone', form.phone || '—'], ['Country', form.country || '—'], ['Procedure', form.procedure || 'To be advised'], ['Destination', form.destination || 'No preference']] as const).map(([k, v]) => (
-                          <div key={k}><dt className="text-[10px] uppercase tracking-[0.18em] text-charcoal/45">{k}</dt><dd className="mt-1 text-charcoal/85">{v}</dd></div>
+                          <div key={k}><dt className="text-[10px] uppercase tracking-[0.18em] text-charcoal/65">{k}</dt><dd className="mt-1 text-charcoal/85">{v}</dd></div>
                         ))}
                       </dl>
                       <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-charcoal/70">

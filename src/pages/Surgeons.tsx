@@ -68,12 +68,12 @@ export default function Surgeons() {
                 <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-teal-soft">{s.years} · {s.region}</p>
                 <div className="mt-5 border-t border-sand/10 pt-4">
                   <p className="text-sm text-sand/70">{s.focus}</p>
-                  <p className="mt-1 text-[13px] text-sand/45">{s.cases}</p>
+                  <p className="mt-1 text-[13px] text-sand/60">{s.cases}</p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="reveal mt-10 text-xs text-sand/40">Illustrative placeholder profiles. Named surgeon profiles with full credentials will be published as partnership agreements finalize.</p>
+          <p className="reveal mt-10 text-xs text-sand/55">Illustrative placeholder profiles. Named surgeon profiles with full credentials will be published as partnership agreements finalize.</p>
           <div className="reveal mt-10">
             <Link to="/contact" className="btn-gold">{t.cta.request} <ArrowRight className="h-4 w-4" /></Link>
           </div>

@@ -81,7 +81,7 @@ export default function ProcedureDetail() {
           <aside className="lg:col-span-5">
             <div className="reveal sticky top-28 border border-charcoal/10 bg-white p-8">
               <h2 className="eyebrow-teal">Indicative Investment</h2>
-              <p className="mt-2 text-xs text-charcoal/50">Varies by clinic, surgeon, and technique — written quotes always precede any commitment.</p>
+              <p className="mt-2 text-xs text-charcoal/70">Varies by clinic, surgeon, and technique — written quotes always precede any commitment.</p>
               <dl className="mt-6 space-y-5">
                 {([['United States', p.price.usa], ['Turkey', p.price.turkey], ['Lebanon', p.price.lebanon]] as const).map(([k, v]) => (
                   <div key={k} className="flex items-baseline justify-between border-b border-charcoal/10 pb-4">

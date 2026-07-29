@@ -36,7 +36,7 @@
 @layer components {
   .container-lux { @apply mx-auto w-full max-w-6xl px-6 md:px-10; }
   .eyebrow { @apply text-[11px] font-medium uppercase tracking-widest2 text-gold; }
-  .eyebrow-teal { @apply text-[11px] font-medium uppercase tracking-widest2 text-teal; }
+  .eyebrow-teal { @apply text-[11px] font-medium uppercase tracking-widest2 text-teal-deep; }
   .h-serif { @apply font-serif font-medium leading-[1.08] tracking-tight; }
   .btn-gold { @apply inline-flex items-center justify-center gap-2 border border-gold bg-gold/0 px-8 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink; }
   .btn-gold-solid { @apply inline-flex items-center justify-center gap-2 bg-gold px-8 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-ink transition-all duration-300 hover:bg-gold-soft; }
@@ -44,8 +44,8 @@
   .hairline { @apply h-px w-16 bg-gold/60; }
   .hairline-teal { @apply h-px w-16 bg-teal/60; }
   .link-quiet { @apply text-[12px] uppercase tracking-[0.18em] text-sand/60 transition-colors hover:text-gold; }
-  .input-lux { @apply w-full border border-sand/15 bg-white/[0.03] px-4 py-3 text-sm text-sand placeholder:text-sand/35 outline-none transition-colors focus:border-gold/60; }
-  .input-lux-light { @apply w-full border border-charcoal/15 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/35 outline-none transition-colors focus:border-gold; }
+  .input-lux { @apply w-full border border-sand/15 bg-white/[0.03] px-4 py-3 text-sm text-sand placeholder:text-sand/55 outline-none transition-colors focus:border-gold/60; }
+  .input-lux-light { @apply w-full border border-charcoal/15 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/55 outline-none transition-colors focus:border-gold; }
 }
 
 @layer utilities {

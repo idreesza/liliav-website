@@ -30,8 +30,14 @@ connecting international patients with vetted, board-certified clinics across th
 npm install
 npm run dev            # local dev server
 npm run build          # production build -> dist/
-node scripts/prerender.cjs   # emit static HTML per route + sitemap.xml + robots.txt
+npm run build:full     # production build + prerender (static HTML per route,
+                       # sitemap.xml, robots.txt) — use this as the build command
+                       # for Cloudflare Pages / any static host
 ```
+
+> **Cloudflare Pages:** set the build command to `npm run build:full` and the
+> output directory to `dist`. Node 20.19.0 is selected automatically via `.nvmrc`.
+> `robots.txt`, `sitemap.xml`, and `llms.txt` ship from `public/` with every build.
 
 The output in `dist/` is a **pure static site** — host it anywhere (GitHub Pages,
 Netlify, S3, nginx). No server code required.
