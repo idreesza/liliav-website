@@ -54933,8 +54933,8 @@ function DisclaimerNote({ light = false, className = "" }) {
 
 // src/components/layout.tsx
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
-var PHONE = "+1 (310) 555-0142";
-var WA_LINK = "https://wa.me/13105550142";
+var PHONE = "+1 (254) 435-5877";
+var WA_LINK = "https://wa.me/12544355877";
 function LangSwitch() {
   const { lang, setLang } = useLang();
   return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "flex items-center gap-1 text-[11px] tracking-[0.14em]", children: LANGS.map((l) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
@@ -56011,7 +56011,7 @@ function Destinations() {
         {
           base: d.image,
           alt: `${d.name === "United States" ? "Plastic surgery in the USA" : d.name === "Turkey" ? "Plastic surgery in Turkey \u2014 Istanbul" : "Cosmetic surgery in Lebanon \u2014 Beirut"} skyline, vetted clinics via the Liliav plastic surgery brokerage`,
-          className: "absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
+          className: "absolute inset-0 h-full w-full object-cover transition-transform [transition-duration:1.4s] ease-out group-hover:scale-[1.04]"
         }
       ),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/35 to-transparent" }),
@@ -56717,7 +56717,7 @@ function Results() {
         { img: "portrait-2", label: "Istanbul \xB7 30s" },
         { img: "portrait-3", label: "Los Angeles \xB7 20s" }
       ].map((p) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("figure", { className: "reveal group relative overflow-hidden", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(LuxImg, { base: p.img, alt: `Illustrative patient portrait, ${p.label} \u2014 representing the Liliav plastic surgery brokerage community`, sizes: "(min-width: 768px) 33vw, 100vw", className: "aspect-[2/3] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03]" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(LuxImg, { base: p.img, alt: `Illustrative patient portrait, ${p.label} \u2014 representing the Liliav plastic surgery brokerage community`, sizes: "(min-width: 768px) 33vw, 100vw", className: "aspect-[2/3] w-full object-cover transition-transform [transition-duration:1.2s] group-hover:scale-[1.03]" }),
         /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" }),
         /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("figcaption", { className: "absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.2em] text-sand/80", children: p.label })
       ] }, p.img)) }),
@@ -57020,7 +57020,7 @@ function Journal() {
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("section", { className: "bg-cream py-20 text-charcoal md:py-28", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "container-lux grid gap-x-10 gap-y-16 md:grid-cols-2", children: ARTICLES.map((a, i) => /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(Link, { to: `/journal/${a.slug}`, className: `reveal group ${i === 0 ? "md:col-span-2" : ""}`, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(LuxImg, { base: a.image, alt: `${a.title} \u2014 Liliav Journal, plastic surgery and medical concierge insights`, sizes: i === 0 ? "100vw" : "(min-width: 768px) 50vw, 100vw", className: `w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03] ${i === 0 ? "aspect-[21/9]" : "aspect-[16/10]"}` }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(LuxImg, { base: a.image, alt: `${a.title} \u2014 Liliav Journal, plastic surgery and medical concierge insights`, sizes: i === 0 ? "100vw" : "(min-width: 768px) 50vw, 100vw", className: `w-full object-cover transition-transform [transition-duration:1.2s] group-hover:scale-[1.03] ${i === 0 ? "aspect-[21/9]" : "aspect-[16/10]"}` }) }),
       /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "mt-6 flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-teal-deep", children: [
         /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: a.category }),
         /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "h-px w-6 bg-gold" }),
@@ -57068,7 +57068,7 @@ function Article() {
       ] }) })
     ] }) }),
     /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("section", { className: "bg-ink py-20", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "container-lux grid gap-10 md:grid-cols-2", children: others.map((o) => /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(Link, { to: `/journal/${o.slug}`, className: "group", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(LuxImg, { base: o.image, alt: `${o.title} \u2014 Liliav Journal`, sizes: "(min-width: 768px) 50vw, 100vw", className: "aspect-[16/8] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03]" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(LuxImg, { base: o.image, alt: `${o.title} \u2014 Liliav Journal`, sizes: "(min-width: 768px) 50vw, 100vw", className: "aspect-[16/8] w-full object-cover transition-transform [transition-duration:1.2s] group-hover:scale-[1.03]" }) }),
       /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("p", { className: "mt-5 text-[10px] uppercase tracking-[0.2em] text-teal-soft", children: [
         o.category,
         " \xB7 ",

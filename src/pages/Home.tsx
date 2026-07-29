@@ -166,7 +166,7 @@ function Destinations() {
             <LuxImg
               base={d.image}
               alt={`${d.name === 'United States' ? 'Plastic surgery in the USA' : d.name === 'Turkey' ? 'Plastic surgery in Turkey — Istanbul' : 'Cosmetic surgery in Lebanon — Beirut'} skyline, vetted clinics via the Liliav plastic surgery brokerage`}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
+              className="absolute inset-0 h-full w-full object-cover transition-transform [transition-duration:1.4s] ease-out group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/35 to-transparent" />
             <div className={`container-lux relative flex h-full flex-col justify-center ${i % 2 ? 'items-end text-right' : ''}`}>

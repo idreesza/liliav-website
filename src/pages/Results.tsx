@@ -48,7 +48,7 @@ export default function Results() {
               { img: 'portrait-3', label: 'Los Angeles · 20s' },
             ].map((p) => (
               <figure key={p.img} className="reveal group relative overflow-hidden">
-                <LuxImg base={p.img} alt={`Illustrative patient portrait, ${p.label} — representing the Liliav plastic surgery brokerage community`} sizes="(min-width: 768px) 33vw, 100vw" className="aspect-[2/3] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.03]" />
+                <LuxImg base={p.img} alt={`Illustrative patient portrait, ${p.label} — representing the Liliav plastic surgery brokerage community`} sizes="(min-width: 768px) 33vw, 100vw" className="aspect-[2/3] w-full object-cover transition-transform [transition-duration:1.2s] group-hover:scale-[1.03]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.2em] text-sand/80">{p.label}</figcaption>
               </figure>

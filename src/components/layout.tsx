@@ -4,8 +4,8 @@ import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 import { useLang, LANGS } from '@/i18n';
 import { Wordmark } from './common';
 
-export const PHONE = '+1 (310) 555-0142';
-export const WA_LINK = 'https://wa.me/13105550142';
+export const PHONE = '+1 (254) 435-5877';
+export const WA_LINK = 'https://wa.me/12544355877';
 
 function LangSwitch() {
   const { lang, setLang } = useLang();
