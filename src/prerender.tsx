@@ -14,6 +14,7 @@ import Contact from '@/pages/Contact';
 import { Journal, Article } from '@/pages/Journal';
 import Legal from '@/pages/Legal';
 import NotFound from '@/pages/NotFound';
+import LegacyRedirect from '@/pages/LegacyRedirect';
 import { PAGES } from '@/seo';
 
 export { PAGES };
@@ -37,7 +38,125 @@ export function render(path: string): string {
             <Route path="journal" element={<Journal />} />
             <Route path="journal/:slug" element={<Article />} />
             <Route path="legal/:doc" element={<Legal />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="embed/*" element={<LegacyRedirect />} />
+          <Route path="static/*" element={<LegacyRedirect />} />
+          <Route path="feeds/*" element={<LegacyRedirect />} />
+          <Route path=".well-known/*" element={<LegacyRedirect />} />
+          <Route path="new-1.html" element={<LegacyRedirect />} />
+          <Route path="new-2.html" element={<LegacyRedirect />} />
+          <Route path="new-3.html" element={<LegacyRedirect />} />
+          <Route path="new-4.html" element={<LegacyRedirect />} />
+          <Route path="new-5.html" element={<LegacyRedirect />} />
+          <Route path="new-6.html" element={<LegacyRedirect />} />
+          <Route path="new-7.html" element={<LegacyRedirect />} />
+          <Route path="new-8.html" element={<LegacyRedirect />} />
+          <Route path="new-9.html" element={<LegacyRedirect />} />
+          <Route path="new-10.html" element={<LegacyRedirect />} />
+          <Route path="new-11.html" element={<LegacyRedirect />} />
+          <Route path="new-12.html" element={<LegacyRedirect />} />
+          <Route path="new-13.html" element={<LegacyRedirect />} />
+          <Route path="new-14.html" element={<LegacyRedirect />} />
+          <Route path="new-15.html" element={<LegacyRedirect />} />
+          <Route path="new-16.html" element={<LegacyRedirect />} />
+          <Route path="new-17.html" element={<LegacyRedirect />} />
+          <Route path="new-18.html" element={<LegacyRedirect />} />
+          <Route path="new-19.html" element={<LegacyRedirect />} />
+          <Route path="new-20.html" element={<LegacyRedirect />} />
+          <Route path="new-21.html" element={<LegacyRedirect />} />
+          <Route path="new-22.html" element={<LegacyRedirect />} />
+          <Route path="new-23.html" element={<LegacyRedirect />} />
+          <Route path="new-24.html" element={<LegacyRedirect />} />
+          <Route path="new-25.html" element={<LegacyRedirect />} />
+          <Route path="new-26.html" element={<LegacyRedirect />} />
+          <Route path="new-27.html" element={<LegacyRedirect />} />
+          <Route path="new-28.html" element={<LegacyRedirect />} />
+          <Route path="new-29.html" element={<LegacyRedirect />} />
+          <Route path="new-30.html" element={<LegacyRedirect />} />
+          <Route path="new-31.html" element={<LegacyRedirect />} />
+          <Route path="new-32.html" element={<LegacyRedirect />} />
+          <Route path="new-33.html" element={<LegacyRedirect />} />
+          <Route path="new-34.html" element={<LegacyRedirect />} />
+          <Route path="new-35.html" element={<LegacyRedirect />} />
+          <Route path="new-36.html" element={<LegacyRedirect />} />
+          <Route path="new-37.html" element={<LegacyRedirect />} />
+          <Route path="new-38.html" element={<LegacyRedirect />} />
+          <Route path="new-39.html" element={<LegacyRedirect />} />
+          <Route path="new-40.html" element={<LegacyRedirect />} />
+          <Route path="new-41.html" element={<LegacyRedirect />} />
+          <Route path="new-42.html" element={<LegacyRedirect />} />
+          <Route path="new-43.html" element={<LegacyRedirect />} />
+          <Route path="new-44.html" element={<LegacyRedirect />} />
+          <Route path="new-45.html" element={<LegacyRedirect />} />
+          <Route path="new-46.html" element={<LegacyRedirect />} />
+          <Route path="new-47.html" element={<LegacyRedirect />} />
+          <Route path="new-48.html" element={<LegacyRedirect />} />
+          <Route path="new-49.html" element={<LegacyRedirect />} />
+          <Route path="new-50.html" element={<LegacyRedirect />} />
+          <Route path="new-51.html" element={<LegacyRedirect />} />
+          <Route path="new-52.html" element={<LegacyRedirect />} />
+          <Route path="new-53.html" element={<LegacyRedirect />} />
+          <Route path="new-54.html" element={<LegacyRedirect />} />
+          <Route path="new-55.html" element={<LegacyRedirect />} />
+          <Route path="new-56.html" element={<LegacyRedirect />} />
+          <Route path="new-57.html" element={<LegacyRedirect />} />
+          <Route path="new-58.html" element={<LegacyRedirect />} />
+          <Route path="new-59.html" element={<LegacyRedirect />} />
+          <Route path="new-60.html" element={<LegacyRedirect />} />
+          <Route path="new-61.html" element={<LegacyRedirect />} />
+          <Route path="new-62.html" element={<LegacyRedirect />} />
+          <Route path="new-63.html" element={<LegacyRedirect />} />
+          <Route path="new-64.html" element={<LegacyRedirect />} />
+          <Route path="new-65.html" element={<LegacyRedirect />} />
+          <Route path="new-66.html" element={<LegacyRedirect />} />
+          <Route path="new-67.html" element={<LegacyRedirect />} />
+          <Route path="new-68.html" element={<LegacyRedirect />} />
+          <Route path="new-69.html" element={<LegacyRedirect />} />
+          <Route path="new-70.html" element={<LegacyRedirect />} />
+          <Route path="new-71.html" element={<LegacyRedirect />} />
+          <Route path="new-72.html" element={<LegacyRedirect />} />
+          <Route path="new-73.html" element={<LegacyRedirect />} />
+          <Route path="new-74.html" element={<LegacyRedirect />} />
+          <Route path="new-75.html" element={<LegacyRedirect />} />
+          <Route path="new-76.html" element={<LegacyRedirect />} />
+          <Route path="new-77.html" element={<LegacyRedirect />} />
+          <Route path="new-78.html" element={<LegacyRedirect />} />
+          <Route path="new-79.html" element={<LegacyRedirect />} />
+          <Route path="new-80.html" element={<LegacyRedirect />} />
+          <Route path="new-81.html" element={<LegacyRedirect />} />
+          <Route path="new-82.html" element={<LegacyRedirect />} />
+          <Route path="new-83.html" element={<LegacyRedirect />} />
+          <Route path="new-84.html" element={<LegacyRedirect />} />
+          <Route path="new-85.html" element={<LegacyRedirect />} />
+          <Route path="new-86.html" element={<LegacyRedirect />} />
+          <Route path="new-87.html" element={<LegacyRedirect />} />
+          <Route path="new-88.html" element={<LegacyRedirect />} />
+          <Route path="new-89.html" element={<LegacyRedirect />} />
+          <Route path="new-90.html" element={<LegacyRedirect />} />
+          <Route path="new-91.html" element={<LegacyRedirect />} />
+          <Route path="new-92.html" element={<LegacyRedirect />} />
+          <Route path="new-93.html" element={<LegacyRedirect />} />
+          <Route path="new-94.html" element={<LegacyRedirect />} />
+          <Route path="new-95.html" element={<LegacyRedirect />} />
+          <Route path="new-96.html" element={<LegacyRedirect />} />
+          <Route path="new-97.html" element={<LegacyRedirect />} />
+          <Route path="new-98.html" element={<LegacyRedirect />} />
+          <Route path="new-99.html" element={<LegacyRedirect />} />
+          <Route path="new-100.html" element={<LegacyRedirect />} />
+          <Route path="new-101.html" element={<LegacyRedirect />} />
+          <Route path="new-102.html" element={<LegacyRedirect />} />
+          <Route path="new-103.html" element={<LegacyRedirect />} />
+          <Route path="new-104.html" element={<LegacyRedirect />} />
+          <Route path="new-105.html" element={<LegacyRedirect />} />
+          <Route path="hot.html" element={<LegacyRedirect />} />
+          <Route path="like.html" element={<LegacyRedirect />} />
+          <Route path="new.html" element={<LegacyRedirect />} />
+          <Route path="feed" element={<LegacyRedirect />} />
+          <Route path="feed.xml" element={<LegacyRedirect />} />
+          <Route path="atom.xml" element={<LegacyRedirect />} />
+          <Route path="index.xml" element={<LegacyRedirect />} />
+          <Route path="ads.txt" element={<LegacyRedirect />} />
+          <Route path="app-ads.txt" element={<LegacyRedirect />} />
+          <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </LanguageProvider>

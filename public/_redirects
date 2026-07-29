@@ -1,0 +1,30 @@
+# Legacy site redirects — the domain previously hosted an unrelated site.
+# All legacy page paths permanently redirect to the new home page (301).
+
+# Legacy content pages (video/CMS site)
+/embed/*        /    301
+/hot.html       /    301
+/like.html      /    301
+/new.html       /    301
+/new-*.html     /    301
+
+# Legacy feeds & indexes
+/feed           /    301
+/feed/          /    301
+/feed.xml       /    301
+/atom.xml       /    301
+/index.xml      /    301
+/feeds/*        /    301
+
+# Legacy static assets
+/static/*       /    301
+
+# Legacy ad metadata
+/ads.txt        /    301
+/app-ads.txt    /    301
+
+# Legacy .well-known probes (old platform metadata)
+/.well-known/*  /    301
+
+# SPA fallback — everything else serves the app (client router handles 404s)
+/*              /index.html   200
